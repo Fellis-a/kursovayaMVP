@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="382.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GUI.MainFormController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onSaveToFileClick" text="Save to..." />
+                  <MenuItem mnemonicParsing="false" onAction="#onLoadToFileClick" text="Load from..." />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Data">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onAddClick" text="Add" />
+                  <MenuItem mnemonicParsing="false" onAction="#onEditClick" text="Edit" />
+                  <MenuItem mnemonicParsing="false" onAction="#onDeleteClick" text="Delete" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="28.0" prefWidth="537.0">
+         <children>
+            <Label text="Тип:">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <ComboBox fx:id="cmbGadgetType" prefHeight="27.0" prefWidth="141.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+      <TableView fx:id="mainTable" prefHeight="248.0" prefWidth="291.0" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

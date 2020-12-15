@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<GridPane hgap="4.0" prefHeight="382.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GUI.GadgetFormController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="106.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="154.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="36.0" minHeight="30.0" prefHeight="35.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="43.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints maxHeight="52.0" minHeight="30.0" prefHeight="30.0" vgrow="ALWAYS" />
+        <RowConstraints maxHeight="532.0" minHeight="10.0" prefHeight="506.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+   <children>
+      <ChoiceBox fx:id="cmbGadgetType" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="237.0" GridPane.columnSpan="2" />
+      <Label layoutX="14.0" layoutY="58.0" text="Название" GridPane.rowIndex="1" />
+      <TextField fx:id="txtTitle" layoutX="90.0" layoutY="53.0" prefHeight="27.0" prefWidth="76.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label layoutX="14.0" layoutY="89.0" prefHeight="27.0" prefWidth="63.0" text="Дисплей" textOverrun="CLIP" wrapText="true" GridPane.rowIndex="2" />
+      <TextField fx:id="txtDisplay" layoutX="90.0" layoutY="89.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <VBox layoutY="130.0" prefHeight="538.0" prefWidth="265.0" spacing="8.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+         <children>
+            <VBox fx:id="laptopPane" prefHeight="27.0" prefWidth="265.0">
+               <children>
+                  <Line endX="164.0" fill="BLACK" startX="-100.0" />
+                  <Label alignment="BOTTOM_LEFT" text="Ноутбуки">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="200.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Line endX="164.0" startX="-100.0" />
+                  <Label text="Процессор">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Label>
+                  <ChoiceBox fx:id="cmbCore" prefHeight="27.0" prefWidth="161.0">
+                     <opaqueInsets>
+                        <Insets top="5.0" />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <Label layoutX="20.0" text="Объем диска">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="txtVolumeDisc" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="128.0">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin></TextField>
+                  <CheckBox fx:id="chkLightKey" mnemonicParsing="false" text="Подсветка клавиатуры">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </VBox.margin></CheckBox>
+                  <Label />
+               </children>
+            </VBox>
+            <VBox fx:id="tabletPane" prefHeight="150.0" prefWidth="265.0" spacing="4.0">
+               <children>
+                  <Line endX="164.0" startX="-100.0" />
+                  <Label text="Планшеты">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="195.0" />
+                     </padding>
+                  </Label>
+                  <Line endX="164.0" startX="-100.0" VBox.vgrow="SOMETIMES" />
+                  <CheckBox fx:id="chkCamera" mnemonicParsing="false" text="Камера">
+                     <padding>
+                        <Insets bottom="5.0" right="5.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin></CheckBox>
+                  <Label text="dpi экрана">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="txtDpi" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="77.0">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin></TextField>
+               </children></VBox>
+            <VBox fx:id="smartphonePane" minHeight="139.0" prefHeight="139.0" prefWidth="265.0" spacing="4.0">
+               <children>
+                  <Line endX="164.0" startX="-100.0" />
+                  <Label text="Смартфоны">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="185.0" />
+                     </padding>
+                  </Label>
+                  <Line endX="164.0" startX="-100.0" />
+                  <CheckBox fx:id="chkOneSim" mnemonicParsing="false" text="Одна Sim">
+                     <padding>
+                        <Insets left="20.0" top="5.0" />
+                     </padding></CheckBox>
+                  <CheckBox fx:id="chkTwoSim" mnemonicParsing="false" text="Две Sim">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="5.0" />
+                     </VBox.margin></CheckBox>
+                  <Label text="Камера">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="txtMpCamera" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="114.0">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin></TextField>
+                  <Label text="Батарея">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="txtBattery" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="115.0">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin></TextField>
+               </children></VBox>
+         </children>
+          <padding>
+              <Insets bottom="20.0" top="20.0" />
+          </padding>
+      </VBox>
+       <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onSaveClick" text="Сохранить" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </GridPane.margin></Button>
+       <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#onCancelClick" prefWidth="81.0" text="Отмена" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="10.0" right="10.0" />
+         </GridPane.margin></Button>
+   </children>
+    <padding>
+        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+    </padding>
+</GridPane>
